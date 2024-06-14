@@ -34,6 +34,16 @@ def interpret(code):
                 mode[0] = 6
             elif token == "@stk":
                 print(stack, end="")
+            elif token == "@m7":
+                mode[0] = 7
+            elif token == "@m8":
+                mode[0] = 8
+            elif token == "@m9":
+                mode[0] = 9
+            elif token == "@m10":
+                mode[0] = 10
+            elif token == "@clr":
+                stack.clear()
         elif mode[0] == 1:
             if token == "@m0":
                 string = " ".join(string)
@@ -87,6 +97,29 @@ def interpret(code):
                 mode[0] = 0
             else:
                 print(variables.get(token), end="")
+        elif mode[0] == 7:
+            if token == "@m0":
+                variables[varname[0]] = input()
+                mode[0] = 0
+            else:
+                varname[0] = token
+        elif mode[0] == 8:
+            if token == "@m0":
+                variables[varname[0]] = int(variables.get(varname[0]))
+                mode[0] = 0
+            else:
+                varname[0] = token
+        elif mode[0] == 9:
+            if token == "@m0":
+                variables[varname[0]] = float(variables.get(varname[0]))
+                mode[0] = 0
+            else:
+                varname[0] = token
+        elif mode[0] == 10:
+            if token == "@m0":
+                mode[0] = 0
+            else:
+                stack.append(variables.get(token))
 
 if __name__ == "__main__":
     if len(sys.argv) == 1:
