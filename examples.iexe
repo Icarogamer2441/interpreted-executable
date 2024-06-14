@@ -29,3 +29,29 @@ print space:
 you can write all your code in just one line:
 
 @m4 myfloat @flt 7.8 @m0 @m6 myfloat @m0 @nl
+
+create an input:
+
+@m1 What's your name?: @m0 @spc
+@m7 name @m0
+@m1 Welcome @m0 @spc @m6 name @m0 @m1 ! @m0 @nl
+
+to int:
+
+@m4 mystrint @str 10 @m0
+@m8 mystrint @m0
+
+to float:
+
+@m4 mystrfloat @str 50.2 @m0
+@m9 mystrfloat @m0
+
+clear the stack
+
+@clr
+
+add an variable into the stack
+
+@m10 mystrfloat mystrint @m0
+@stk 
+@nl
