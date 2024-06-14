@@ -1,0 +1,31 @@
+@m1 Hello world! @m0 @nl @m2 10 5 @m0 @m3 beauty test @m0
+
+all messages are ignored! variables: int, flt (float) and str. example:
+
+@m4 myint @int 10 @m0
+
+adding an float to the stack:
+
+@m5 10.5 5.2 @m0
+
+print the item thats are at the top of the stack:
+
+@prt @nl
+
+print the stack:
+
+@stk @nl
+
+print the value of an variable:
+
+@m6 myint @m0 @nl
+
+you can print two vars or more:
+
+print space:
+
+@spc
+
+you can write all your code in just one line:
+
+@m4 myfloat @flt 7.8 @m0 @m6 myfloat @m0 @nl
