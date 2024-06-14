@@ -89,9 +89,8 @@ def interpret(code):
                 print(variables.get(token), end="")
 
 if __name__ == "__main__":
-    version = "1.0"
     if len(sys.argv) == 1:
-        print(f"Interpreted executables (intexec) version: {version}")
+        print(f"Interpreted executables (intexec)")
         print(f"Usage: {sys.argv[0]} <file>")
     else:
         if sys.argv[1].endswith(".iexe"):
